@@ -1,9 +1,11 @@
 {
   "name": "passportjs",
   "version": "1.0.0",
-  "description": "Autenthication by passport example",
+  "description": "Authentication by passport example",
   "main": "index.js",
   "scripts": {
+    "lint": "standard",
+    "lint-fix": "standard --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,5 +14,12 @@
     "media"
   ],
   "author": "Carlos Gutierrez <ingecarlos.gutierrez@gmail.com> (https://cargdev.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "node": "^14.13.0"
+  }
 }
