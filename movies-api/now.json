@@ -4,9 +4,9 @@
   "builds": [{ "src": "index.js", "use": "@now/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
   "env": {
-    "DB_USER": "@platzivideos-db-user",
-    "DB_PASSWORD": "@platzivideos-db-password",
-    "DB_HOST": "@platzivideos-db-host",
-    "DB_NAME": "@platzivideos-db-name"
+    "DB_USER": "@user_name_passport",
+    "DB_PASSWORD": "@password_db",
+    "DB_HOST": "@host_name",
+    "DB_NAME": "@db_name_passport"
   }
 }
