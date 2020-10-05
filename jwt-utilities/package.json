@@ -1,18 +1,12 @@
 {
-  "name": "passportjs",
+  "name": "jwt-utilities",
   "version": "1.0.0",
-  "description": "Authentication by passport example",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
-    "lint-fix": "standard --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "passport",
-    "social",
-    "media"
-  ],
+  "keywords": [],
   "author": "Carlos Gutierrez <ingecarlos.gutierrez@gmail.com> (https://cargdev.com/)",
   "license": "MIT",
   "devDependencies": {
@@ -20,6 +14,7 @@
     "standard": "^14.3.4"
   },
   "dependencies": {
+    "jsonwebtoken": "^8.5.1",
     "node": "^14.13.0"
   }
 }
