@@ -7,6 +7,11 @@
     "DB_USER": "@user_name_passport",
     "DB_PASSWORD": "@password_db",
     "DB_HOST": "@host_name",
-    "DB_NAME": "@db_name_passport"
+    "DB_NAME": "@db_name_passport",
+    "DEFAULT_ADMIN_PASSWORD": "@default_admin_password",
+    "DEFAULT_USER_PASSWORD": "@default_user_password",
+    "AUTH_JWT_SECRET": "@auth_jwt_secret",
+    "PUBLIC_API_KEY_TOKEN": "@public_api_key_token",
+    "ADMIN_API_KEY_TOKEN": "@admin_api_key_token"
   }
 }
