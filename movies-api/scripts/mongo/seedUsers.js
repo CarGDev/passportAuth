@@ -10,18 +10,20 @@ const users = [
   {
     email: 'root@undefined.sh',
     name: 'ROOT',
-    password: config.defaultAdminPassword,
+    password: config.adminPass,
     isAdmin: true
   },
   {
     email: 'jose@undefined.sh',
     name: 'Jose Maria',
-    password: config.defaultUserPassword
+    password: config.defaultUserPassword,
+    isAdmin: false
   },
   {
     email: 'maria@undefined.sh',
     name: 'Maria Jose',
-    password: config.defaultUserPassword
+    password: config.defaultUserPassword,
+    isAdmin: false
   }
 ];
 
