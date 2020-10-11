@@ -10,13 +10,9 @@ const response = require('../network/response')
 
 function userMoviesApi(app) {
   const router = express.Router()
-  app.user('/api/user-movies', router)
+  app.use('/api/user-movies', router)
 
   const userMoviesService = new UserMoviesService()
-
-  router.get('/', validationHandler({ userId: userIdSchema }, 'query'), getMoviesUser)
-  router.post('/', validationHandler(createUserMovieSchema), postMoviesUser)
-  router.delete('/:userMovieId', validationHandler({ userMovieId: movieIdSchema}, 'params'), deleteMoviesUser)
 
   const getMoviesUser = async (req, res, next) => {
     const { userId } = req.query
@@ -47,6 +43,10 @@ function userMoviesApi(app) {
       next(error)
     }
   }
+
+  router.get('/', validationHandler({ userId: userIdSchema }, 'query'), getMoviesUser)
+  router.post('/', validationHandler(createUserMovieSchema), postMoviesUser)
+  router.delete('/:userMovieId', validationHandler({ userMovieId: movieIdSchema}, 'params'), deleteMoviesUser)
 }
 
 module.exports = userMoviesApi
