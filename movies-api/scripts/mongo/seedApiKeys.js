@@ -1,3 +1,5 @@
+'use strict'
+
 // DEBUG=app:* node scripts/mongo/seedApiKeys.js
 
 const chalk = require('chalk');

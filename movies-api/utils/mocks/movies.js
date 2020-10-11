@@ -1,3 +1,5 @@
+'use strict'
+
 const moviesMock = [
   {
     id: 'd2a4a062-d256-41bb-b1b2-9d915af6b75e',

@@ -1,3 +1,5 @@
+'use strict'
+
 // DEBUG=app:* node scripts/mongo/seedMovies.js
 
 const chalk = require('chalk');

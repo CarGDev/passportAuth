@@ -1,3 +1,5 @@
+'use strict'
+
 const boom = require('@hapi/boom');
 const joi = require('@hapi/joi');
 

@@ -1,3 +1,5 @@
+'use strict'
+
 const FIVE_MINUTES_IN_SECONDS = 300;
 const SIXTY_MINUTES_IN_SECONDS = 3600;
 
