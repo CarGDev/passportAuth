@@ -20,6 +20,7 @@ app.use(cookieParser())
 
 // Basic Strategy
 require('./utils/auth/strategies/basic')
+require('./utils/auth/strategies/oauth')
 
 const postSignIn = async (req, res, next) => {
   const { rememberMe } = req.body
@@ -106,9 +107,25 @@ const deleteMovie = async (req, res, next) => {
   }
 }
 
+const googleCb = (req, res, next) => {
+  if (!req.user) next(boom.unauthorized())
+
+  const { token, ...user } = req.user
+  res.cookie('token', token, {
+    httpOnly: !config.dev,
+    secure: !config.dev
+  })
+
+  res.status(200).json(user)
+}
+
+app.get("/movies", getMoviesList);
+app.get("/auth/google-oauth/callback", passport.authenticate('google-oauth', { session: false }), googleCb);
+app.get("/auth/google-oauth", passport.authenticate('google-oauth', {
+  scope: [ 'email', 'profile' , 'openid']
+}));
 app.post("/auth/sign-in", postSignIn)
 app.post("/auth/sign-up", postSignUp);
-app.get("/movies", getMoviesList);
 app.post("/user-movies", postMovies);
 app.delete("/user-movies/:userMovieId", deleteMovie);
 
