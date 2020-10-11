@@ -1,3 +1,5 @@
+'use strict'
+
 // DEBUG=app:* node scripts/mongo/seedUsers.js
 
 const bcrypt = require('bcrypt');

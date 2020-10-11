@@ -1,3 +1,5 @@
+'use strict'
+
 const boom = require('@hapi/boom');
 
 function notFoundHandler(req, res) {

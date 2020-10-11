@@ -1,3 +1,5 @@
+'use strict'
+
 function buildMessage(entity, action) {
   if (action === 'list') {
     return `${entity}s ${action}ed`;

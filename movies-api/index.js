@@ -1,3 +1,5 @@
+'use strict'
+
 const express = require('express');
 const app = express();
 
@@ -30,6 +32,6 @@ app.use(logErrors);
 app.use(wrapErrors);
 app.use(errorHandler);
 
-app.listen(config.port, function() {
+app.listen(config.port, () => {
   console.log(`Listening http://localhost:${config.port}`);
 });
