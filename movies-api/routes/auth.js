@@ -103,6 +103,7 @@ const authApi = (app) => {
   router.post('/sign-in', routeAuth)
   router.post('/sign-up', validationHandler(createUserSchema), routeSignUP)
   router.post('/sign-provider', validationHandler(createProviderUserSchema), routeSignProvider)
+
 }
 
 module.exports = authApi
